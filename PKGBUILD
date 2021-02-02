@@ -6,7 +6,7 @@
 pkgname=dwm-rak
 _pkgname=dwm
 _gitname=dwm-rak-patch
-pkgver=r1685.61bb8b2
+pkgver=r1688.f29b5ec
 pkgrel=1
 pkgdesc="A dynamic window manager for X"
 url="http://dwm.suckless.org"
@@ -33,6 +33,7 @@ pkgver() {
 
 prepare() {
   cd "$srcdir/$_gitname"
+  git checkout master
   cp "$srcdir/config.h" config.h
 }
 
@@ -45,6 +46,6 @@ package() {
   cd "$srcdir/$_gitname"
   make PREFIX=/usr DESTDIR="$pkgdir" install
   install -m644 -D LICENSE "$pkgdir/usr/share/licenses/$_pkgname/LICENSE"
-  install -m644 -D README "$pkgdir/usr/share/doc/$_pkgname/README"
+  #install -m644 -D README "$pkgdir/usr/share/doc/$_pkgname/README"
   install -m644 -D "$srcdir/dwm.desktop" "$pkgdir/usr/share/xsessions/dwm.desktop"
 }
