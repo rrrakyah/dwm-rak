@@ -6,7 +6,7 @@
 pkgname=dwm-rak
 _pkgname=dwm
 _gitname=dwm-rak-patch
-pkgver=r1685.61bb8b2
+pkgver=r1691.105cbcb
 pkgrel=1
 pkgdesc="A dynamic window manager for X"
 url="http://dwm.suckless.org"
@@ -33,7 +33,7 @@ pkgver() {
 
 prepare() {
   cd "$srcdir/$_gitname"
-  git checkout master
+  git checkout patched
   cp "$srcdir/config.h" config.h
 }
 
