@@ -6,7 +6,7 @@
 pkgname=dwm-rak
 _pkgname=dwm
 _gitname=dwm-rak-patch
-pkgver=r1679.16ea1bd
+pkgver=r1686.15a2ce8
 pkgrel=1
 pkgdesc="A dynamic window manager for X"
 url="http://dwm.suckless.org"
